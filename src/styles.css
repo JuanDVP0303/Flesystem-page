@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{border:1px solid red} */
+*{
+    box-sizing: border-box;
+}
+
+.leaflet-container{
+    width: 90%;
+    height: 50vh;
+    z-index: 1;
+    margin:0 auto 2rem ;
+}
+
+
+input, textarea{
+    width: 100%;
+    max-height: 180px;
+}
+
+form > div{
+    color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Kanit', sans-serif;
+}
+
+.active{
+    pointer-events: none;
+    font-weight: bold;
+    color: #a0c3ff
+}
+
+.empresa{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
