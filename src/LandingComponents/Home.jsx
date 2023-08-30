@@ -36,7 +36,7 @@ function Slider() {
 
   return (
     <>
-      <div className="figure-scroll flex overflow-hidden justify-center w-[90%] lg:w-[60%] pt-32  m-m-0-auto ">
+      <div className="figure-scroll flex overflow-hidden justify-center w-[90%] lg:w-[60%] pt-32 m-m-0-auto ">
         {carousselDataImg.map(({ url, id }) => (
           <img className="w-full object-cover" src={url} key={id} />
         ))}
@@ -69,12 +69,12 @@ export default function Home() {
       <div className="bg-gradient-to-r from-[#1e3c72] to-[#2974f5]  h-[120vh]  w-full absolute -z-1 "></div>
       <figure className="h-[100%] w-full flex justify-center items-center gap-10 flex-col relative pt-32 ">
         <img
-          src="http://flesystem.com/index_htm_files/656.jpg"
+          src="https://i.postimg.cc/SNH2BvYS/656.jpg"
           className="empresa md:w-[40%]"
           alt=""
         />
         <img
-          src="http://flesystem.com/index_htm_files/510.png"
+          src="https://i.postimg.cc/6qyqSr94/510.png"
           className="w-[90%] md:w-[40%]  object-contain relativ"
           alt=""
         />
@@ -86,7 +86,7 @@ export default function Home() {
             const isActive2 = isActive ? "active" : "text-white";
             return `${isActive2} p-2 mb-5 bg-green-700 rounded-md active:scale-105 transition-all hover:bg-green-900 hover:scale-110`;
           }}
-          to={"/Flesystem-page/products"}
+          to={"/products"}
         >
           Productos
         </NavLink>

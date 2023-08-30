@@ -1,22 +1,22 @@
 export const carousselDataImg = [
     {
-        url:"http://flesystem.com/index_htm_files/653.jpg",
+        url:"https://i.postimg.cc/vZRTqxCD/653.jpg",
         id:0
     },
     {
-        url:"http://flesystem.com/index_htm_files/654.jpg",
+        url:"https://i.postimg.cc/V6HLjJjf/654.jpg",
         id:1
     },
     {
-        url:"http://flesystem.com/index_htm_files/655.jpg",
+        url:"https://i.postimg.cc/Y2ZC0mr8/655.jpg",
         id:2
     },
     {
-        url:"http://flesystem.com/index_htm_files/656.jpg",
+        url:"https://i.postimg.cc/SNH2BvYS/656.jpg",
         id:3
     },
     {
-        url:"http://flesystem.com/index_htm_files/657.jpg",
+        url:"https://i.postimg.cc/W4N2CG8p/657.jpg",
         id:4
     }
 ]

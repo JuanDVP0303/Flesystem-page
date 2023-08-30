@@ -1,4 +1,3 @@
-import React from "react";
 import { productDataUrl } from "../data";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -33,7 +32,7 @@ export default function Products() {
         <ul className="flex flex-wrap flex-row md:w-[50%] lg:w-[70%] items-center justify-center  lg:gap-20 lg:grid lg:grid-cols-3 lg:justify-center">
           {productDataUrl.map(({ url, productName, id }) => {
             return (
-              <li key={id} className="w-full m-10 flex  justify-center flex-col">
+              <li key={id} className="w-full m-10 flex border transition-all hover:translate-y-[-20px] border-green-300 rounded-lg p-5 shadow-md justify-center flex-col">
                 <Link to={`/products/${id}`}>
                 <h2 className="text-center">{productName}</h2>
                 <img src={url} alt="" className="rounded-lg" />

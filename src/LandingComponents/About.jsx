@@ -1,7 +1,7 @@
-import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { productDataUrl } from "../data";
+import propTypes from "prop-types"
 
 export default function About() {
   return (
@@ -24,6 +24,13 @@ export const CardGenerator = ({bg, content, title, }) => {
   </p>
   </div> 
 }
+
+CardGenerator.propTypes = {
+  bg: propTypes.string,
+  content: propTypes.string,
+  title: propTypes.string
+}
+
 
 const MisionVision = () => {
   return (
@@ -99,7 +106,7 @@ const AboutTwo = () => {
           </p>
           </div>
           <img
-            src="http://flesystem.com/index_htm_files/534.jpg"
+            src="https://i.postimg.cc/3R6YkPTW/534.jpg"
             className="h-96 w-[95%] md:max-w-[50%]"
             alt=""
           />
@@ -113,7 +120,7 @@ const AboutTwo = () => {
 
 const Catalogo = () => {
   return (
-    <div className="bg-[#1e3c72] text-white p-8">
+    <div className="bg-[#1e3c72] text-white p-8 m-m-0-auto">
       <h2 className="font-bold text-center ">¡Observa nuestro catálogo!</h2>
       <article className="flex  overflow-x-scroll lg:overflow-hidden gap-5 h-auto  w-full relative">
         {productDataUrl.map((imgData, index) => {
@@ -132,4 +139,3 @@ const Catalogo = () => {
   );
 };
 
-// bg-[url(https://i.postimg.cc/fTwK5N7x/FLEJ-031-4.jpg)] 
