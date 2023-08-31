@@ -1,9 +1,8 @@
 import {BrowserRouter , Route, Routes} from "react-router-dom"
 import Layout from "./Layouts/Layout"
-import Home from "./LandingComponents/Home"
-import Contact from "./LandingComponents/Contact"
-import Products, { ProductDetail } from "./LandingComponents/Products"
-import About from "./LandingComponents/About"
+import Home from "./Home/Home"
+import Contact from "./Contact/Contact"
+import Products, { ProductDetail } from "./Products/Products"
 
 
 export default function App() {
@@ -12,7 +11,6 @@ export default function App() {
     <Routes>
       <Route path='/' Component={Layout}>
         <Route path="/" Component={Home}/>
-        <Route path="/about" Component={About}/>
         <Route path="/products" Component={Products}/>
         <Route path="/products/:productId" Component={ProductDetail}/>
         <Route path="/contact" Component={Contact}/>
