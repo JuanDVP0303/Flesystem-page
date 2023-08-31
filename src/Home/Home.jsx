@@ -9,9 +9,7 @@ export default function Home() {
   return (
     <main className="">
       {/* Parte superior, hero */}
-      <div className="bg-gradient-to-r from-[#1e3c72] to-[#2974f5]  h-full  w-full absolute -z-1 "></div>
-
-      <figure className="h-[100%] w-full flex justify-center items-center gap-10 flex-col relative pt-20 ">
+      <figure className="h-auto w-full flex justify-center items-center gap-10 flex-col relative pt-20 bg-gradient-to-r from-[#1e3c72] to-[#2974f5]  ">
         <img
           src="https://i.postimg.cc/SNH2BvYS/656.jpg"
           className="empresa md:w-[40%]"
