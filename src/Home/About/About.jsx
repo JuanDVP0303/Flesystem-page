@@ -106,7 +106,7 @@ const Catalogo = () => {
       </article>
       <div className="flex flex-col items-center pt-5">
       <p className="font-bold">Velos en detalles</p>
-      <Link to="/products" className="p-2  bg-green-700 rounded-md active:scale-105 transition-all hover:bg-green-900 hover:scale-110">Products</Link>
+      <Link to="/products" className="p-2  bg-green-700 rounded-md active:scale-105 transition-all hover:bg-green-900 hover:scale-110">Productos</Link>
       </div>
     </div>
   );
