@@ -5,21 +5,23 @@ import { useParams, Link } from "react-router-dom";
 import propTypes from "prop-types";
 
 export default function Products() {
-  const [showToHeader, setShowToHeader] = useState("opacity-0 pointer-events-none")
+  const [showToHeader, setShowToHeader] = useState(
+    "opacity-0 pointer-events-none"
+  );
   useEffect(() => {
     const handleScroll = () => {
-      setShowToHeader(window.scrollY >= 300
-        ? "opacity-1 pointer-events-auto"
-        : "opacity-0 pointer-events-none"
-      )
-    }
-    window.addEventListener("scroll", handleScroll)
+      setShowToHeader(
+        window.scrollY >= 300
+          ? "opacity-1 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+      );
+    };
+    window.addEventListener("scroll", handleScroll);
 
-   
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [window.scrollY])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <main className="pb-24 pt-24">
@@ -32,10 +34,13 @@ export default function Products() {
         <ul className="flex flex-wrap flex-row md:w-[50%] lg:w-[70%] items-center justify-center  lg:gap-20 lg:grid lg:grid-cols-3 lg:justify-center">
           {productDataUrl.map(({ url, productName, id }) => {
             return (
-              <li key={id} className="w-full m-10 flex border transition-all hover:translate-y-[-20px] border-green-300 rounded-lg p-5 shadow-md justify-center flex-col">
+              <li
+                key={id}
+                className="w-full m-10 flex border transition-all hover:translate-y-[-20px] border-green-300 rounded-lg p-5 shadow-md justify-center flex-col"
+              >
                 <Link to={`/products/${id}`}>
-                <h2 className="text-center">{productName}</h2>
-                <img src={url} alt="" className="rounded-lg" />
+                  <h2 className="text-center">{productName}</h2>
+                  <img src={url} alt="" className="rounded-lg" />
                 </Link>
               </li>
             );
@@ -46,52 +51,70 @@ export default function Products() {
   );
 }
 
-
 export const ProductDetail = () => {
   //esperando el parametro que este en la url que sera un numero
-  const {productId} = useParams()
+  const { productId } = useParams();
   //Accediendo a la data del product dependiendo de la url
-  const productData = productDataUrl[productId]
-  const {productName, url, descripcion, caracteristicas, usos, colores} = productData
+  const productData = productDataUrl[productId];
+  const { productName, url, descripcion, caracteristicas, usos, colores } =
+    productData;
 
-  const Titles = ({children}) => {
-    return <h2 className="font-bold text-xl text-center text-green-700">{children}</h2>
-  }
+  const Titles = ({ children }) => {
+    return (
+      <h2 className="font-bold text-xl text-center text-green-700">
+        {children}
+      </h2>
+    );
+  };
   Titles.propTypes = {
-    children: propTypes.string
-  }
-  console.log()
+    children: propTypes.string,
+  };
 
   return (
-    <article className="w-full h-full flex flex-col items-center bg-gray-300/60 rounded-lg py-20">
-      <Link className="border-2 border-green-500 rounded-lg bg-green-100 mb-20"  to={"/products"}>  Volver a los productos</Link>
+    <article className="w-full h-full flex flex-col items-center bg-gray-300/20 rounded-lg py-20">
+      <Link
+        className="border-2 p-2 border-green-500 rounded-lg bg-green-100 mb-20"
+        to={"/products"}
+      >
+        {" "}
+        Volver a los productos
+      </Link>
       <h2 className="font-bold text-3xl mb-5  text-green-700">{productName}</h2>
-      <img src={`${url}`} alt={`${productName}`} className="w-[40vmax]  object-cover rounded mb-10" />
-      <div className="flex flex-col gap-5 px-5">
-      <p className="">{
-        
-        }
-      </p>
-      <Titles>Descripción</Titles>
-      <p>
-        {descripcion}
-      </p> 
-      <Titles>Caracteristicas</Titles>
-      <p>
-        {caracteristicas}
-      </p>
-      <Titles>Usos</Titles>
-       <p>
-        {usos}
-      </p>
-      <Titles>Colores</Titles>
-      
-      {console.log(<span className="font-bold">Hola</span>)}
-      <p>
-        {colores}
-      </p>
+      <img
+        src={`${url}`}
+        alt={`${productName}`}
+        className="rounded-xl border-2 border-green-700  w-[40vmax]  object-cover  mb-10"
+      />
+      <div className="flex flex-col gap-5 px-5 lg:w-[40vmax] text-center">
+        <p className="">{}</p>
+        <Titles>Descripción</Titles>
+        <p>{descripcion}</p>
+
+        <Titles>Caracteristicas</Titles>
+        <ListRendering propiedad={caracteristicas} />
+        <Titles>Usos</Titles>
+        <ListRendering propiedad={usos} />
+        <Titles>Colores</Titles>
+        <ListRendering propiedad={colores} />
       </div>
     </article>
-    )
-}
+  );
+};
 
+const ListRendering = ({ propiedad }) => {
+  return (
+    <ul className="list-disc text-start ">
+      {propiedad.map((prop, i) => {
+        return (
+          <li key={i} className="mb-5">
+            {prop}
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
+ListRendering.propTypes = {
+  propiedad: propTypes.object.isRequired,
+};
