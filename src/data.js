@@ -20,7 +20,6 @@ export const carousselDataImg = [
     id: 4,
   },
 ];
-
 export const productDataUrl = [
   {
     url: "https://i.postimg.cc/fTwK5N7x/FLEJ-031-4.jpg",
