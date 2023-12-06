@@ -103,18 +103,19 @@ export const ProductDetail = () => {
 
 const ListRendering = ({ propiedad }) => {
   return (
+    // <h1></h1>
     <ul className="list-disc text-start ">
-      {propiedad.map((prop, i) => {
+      {propiedad ? propiedad.map((prop, i) => {
         return (
           <li key={i} className="mb-5">
             {prop}
           </li>
         );
-      })}
+      } ) : null}
     </ul>
   );
 };
 
 ListRendering.propTypes = {
-  propiedad: propTypes.object.isRequired,
+  propiedad: propTypes.array.isRequired,
 };

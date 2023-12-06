@@ -28,8 +28,8 @@ export const productDataUrl = [
     id: 0,
     descripcion: "Fleje para embalaje fabricado 100% con Polipropileno Virgen",
     caracteristicas:
-      "Elevada resistencia a la tracción, resistente a los rayos UV y a la humedad. Dimensionalmente preciso y uniforme.",
-    usos: "Por su incomparable calidad el Fleje Flesystem® puede usarse en máquinas automáticas, semi-automáticas  o manuales con excepcionales resultados.",
+      ["Elevada resistencia a la tracción, resistente a los rayos UV y a la humedad. Dimensionalmente preciso y uniforme."],
+    usos: ["Por su incomparable calidad el Fleje Flesystem® puede usarse en máquinas automáticas, semi-automáticas  o manuales con excepcionales resultados."],
     colores: ["Blanco", "Negro", "Verde"],
   },
   {
@@ -57,7 +57,7 @@ export const productDataUrl = [
     id: 4,
 
     caracteristicas:
-      "Cabezal de flejado compacto y robusto, Siemens PLC, Acceso gratuito a guías de flejado (patentes registradas), Mesa de rodillos con bisagras, Expulsor automático de fleje, Dispositivo patentado de expulsión de fleje atascado, Prensa neumática de ancho completo, Función de múltiples flejados, Velocidad variable de la cinta transportadora, Expulsor de extremo de fleje, Altura ajustable de la mesa entre 700 mm y 1000 mm",
+      ["Cabezal de flejado compacto y robusto, Siemens PLC, Acceso gratuito a guías de flejado (patentes registradas), Mesa de rodillos con bisagras, Expulsor automático de fleje, Dispositivo patentado de expulsión de fleje atascado, Prensa neumática de ancho completo, Función de múltiples flejados, Velocidad variable de la cinta transportadora, Expulsor de extremo de fleje, Altura ajustable de la mesa entre 700 mm y 1000 mm"],
   },
   {
     url: "https://i.postimg.cc/sgdYBC6F/To-Web-Semi-Automatic.png",

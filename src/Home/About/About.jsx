@@ -76,7 +76,7 @@ const AboutTwo = () => {
             </p>
           </div>
           <img
-            src="https://i.postimg.cc/Xvnq07n3/Imagen-de-Whats-App-2023-08-24-a-las-15.jpg"
+            src="https://i.postimg.cc/Ss5KfQ7M/Imagen-de-Whats-App-2023-12-06-a-las-19-47-18-787082d0.jpg"
             className="h-96 w-[95%] md:max-w-[50%] rounded-xl"
             alt=""
           />
