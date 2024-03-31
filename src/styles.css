@@ -32,7 +32,11 @@ html{
 .active{
     pointer-events: none;
     font-weight: bold;
-    color: #a0c3ff
+    color: rgb(205, 218, 255);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+    
 }
 
 .empresa{

@@ -31,11 +31,13 @@ export function Slider() {
   
     return (
       <>
-        <div className="figure-scroll flex overflow-hidden justify-center w-[90%] lg:w-[60%] pt-32 m-m-0-auto ">
+        <div className="figure-scroll flex overflow-hidden w-[90%] lg:w-[60%] pt-32 m-m-0-auto ">
           {carousselDataImg.map(({ url, id }) => (
             <img className="w-full object-cover" src={url} key={id} />
           ))}
         </div>
+
+
         <div className="flex flex-row justify-center gap-1">
           {carousselDataImg.map((image) => {
             const scale =

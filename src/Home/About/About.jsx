@@ -91,9 +91,8 @@ const Catalogo = () => {
   return (
     <div className="bg-[#1e3c72] text-white p-8 m-m-0-auto">
       <h2 className="font-bold text-center ">¡Observa nuestro catálogo!</h2>
-      <article className="flex  overflow-x-scroll lg:overflow-hidden gap-5 h-auto  w-full relative">
+      <article className="flex lg:justify-center overflow-x-scroll lg:overflow-hidden gap-5 h-auto  w-full relative">
         {productDataUrl.map((imgData, index) => {
-          console.log(imgData.url);
           return (
             <div className="mt-10 flex flex-col white  w-[150px]" key={index}>
               <h2 className="ml-2 truncate ">{imgData.productName}</h2>

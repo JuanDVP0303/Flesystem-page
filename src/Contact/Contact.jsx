@@ -96,7 +96,6 @@ function Form() {
     setDisabledButton(true);
   };
   const inputsArray = ["Nombre", "Apellido", "Email", "Asunto"]
-  console.log(errors)
   return (
     <>
       <form
@@ -112,7 +111,6 @@ function Form() {
           </p>
         </div>
             {inputsArray.map((category, id) => {
-              console.log(typeof category)
               return <div key={id} className="md:w-[50%] w-[90%] text-center">
               <label className="text-white" htmlFor={category}>
                 {category}
