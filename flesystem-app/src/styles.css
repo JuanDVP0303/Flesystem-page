@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    .min-w-20 {
+        min-width: 5rem; /* Adjust the value as needed */
+    }
+    .min-h-72 {
+        min-height: 18rem; /* Adjust the value as needed */
+    }
+}
+/* *{border:1px solid red} */
+*{
+    box-sizing: border-box;
+}
+
+.leaflet-container{
+    width: 90%;
+    height: 50vh;
+    z-index: 1;
+    margin:0 auto 2rem ;
+}
+
+
+input, textarea{
+    width: 100%;
+    max-height: 180px;
+}
+
+form > div{
+    color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Kanit', sans-serif;
+}
+
+.active{
+    pointer-events: none;
+    font-weight: bold;
+    color: rgb(205, 218, 255);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+    
+}
+
+.empresa{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+:root {
+    --background: #f6f7fb; /* Background remains unchanged */
+    --light-blue: #d4edda; /* Light green */
+    --blue: #28a745; /* Medium green */
+    --medium-blue: #4caf50; /* Medium green */
+    --dark-blue: #155724; /* Dark green */
+    --ultra-dark-blue: #0c3e0a; /* Ultra dark green */
+    --blue-material: #388e3c; /* Green material */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #root, html, body{
+    height: 100%;
+    width: 100%;
+} */
+
+html, body {
+    height: 100vh; /* Asegura que html y body ocupen el 100% de la altura de la ventana */
+    margin: 0; /* Elimina márgenes por defecto */
+}
+main{
+    min-height: 100vh; /* Asegura que el main ocupe el 100% de la altura de la ventana */
+}
+
+#root {
+    min-height: 100%;
+    height: auto; /* Asegura que el root ocupe el 100% de la altura disponible */
+    background: var(--background); /* Mantiene el fondo que ya tienes definido */
+}
+
+.background-image-auth{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: inherit;
+
+}
+
+
+.Container{
+    @apply flex flex-col items-center justify-center h-full ; 
+} 
+
+.home{
+    /* @apply justify-start */
+}
+
+
+.box{
+    box-shadow: 0px 1px 3px rgb(170, 170, 170);
+    @apply  p-2 rounded-lg h-auto w-auto;  
+}
+.boxAuth{
+    @apply rounded-lg h-screen w-full md:w-[60%] z-20;  
+}
+
+.authSubContainer{
+    @apply flex flex-col items-center  mx-auto  h-full gap-3;
+}
+
+.modal{
+    @apply relative w-[90%] md:h-[75%] md:w-[50%]
+}
+
+.title{
+    color:var(--dark-blue);
+    @apply text-2xl font-bold ;
+}
+
+.decoratedTypography{
+    color: var(--blue-material);
+}
+
+.subTitle{
+    color:var(--blue);
+    @apply text-lg font-semibold;
+
+}
+
+
+.highlight{
+    color: var(--dark-blue);
+    @apply font-bold;
+}
+
+.outlined_button{
+    @apply border-green-500 rounded-lg p-2;
+}
+
+.form{
+    @apply mt-2 flex p-3 items-center flex-col gap-5 md:gap-2;
+}
+
+.inventory-income-button{
+    background: #1adb00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #01c701, #00db2f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #01c701, #00db2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.smart-blue-button{
+    background: #5cffa3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #01c701, #00db2f); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #01c701, #00db2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.chip {
+    display: flex;
+    justify-content: center;
+    padding:4px 10px;
+    border-radius: 20px;
+    background-color: rgb(0, 165, 8); /* O usando el código hexadecimal: #00B4DB80 */
+    color: white; /* Color del texto */
+}
+
+.registry-selected{
+    color: var(--medium-blue);
+    font-weight: bold;
+    border-bottom: 3px solid var(--medium-blue);
+    line-height: 1.5;
+    
+}
+
+.strong_green_button {
+    background: #005500; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #007f00, #4caf50, #81c784); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #01aa01, #4caf50, #3ac041); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/*Modificar el estilo del scroll*/
+
+*::-webkit-scrollbar, .navDrawer::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar */
+  }
+  
+*::-webkit-scrollbar-track,.navDrawer::-webkit-scrollbar-track {
+background: #f1f1f1; /* Color de fondo del track */
+border-radius: 10px; /* Bordes redondeados */
+}
+
+*::-webkit-scrollbar-thumb,.navDrawer::-webkit-scrollbar-thumb {
+background-color: #b1b1b1; /* Color del thumb */
+border-radius: 10px; /* Bordes redondeados */
+border: 3px solid #f1f1f1; /* Espacio alrededor del thumb */
+}
+
+*::-webkit-scrollbar-thumb:hover, .navDrawer::-webkit-scrollbar-thumb:hover {
+background: #999999; /* Color del thumb al pasar el mouse */
+}
+
+
+.ingreses-header{
+    background: #a8ff78; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a8ff78, #78ffd6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4cd489, #9ee479); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.egreses-header{
+    background: #ef3b36; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ef3b36, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#ff8a8a, #df5f5b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.dashboardCard {
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
